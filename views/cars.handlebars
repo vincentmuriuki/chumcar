@@ -1,0 +1,138 @@
+<!-- ======Regular Vehicle Block======= -->
+<div class="regular-vehicle-block pd-90 ex-pdt-102">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-lg-screen">
+                <div class="row tb default-margin-bottom mb-block">
+                    <div class="col-md-4 block-title-area tb-cell mb-block">
+                        <div class="heading-content style-one border">
+                            <h3 class="subtitle">Popular Rental Servises </h3>
+                            <h2 class="title">Rental Services</h2>
+                        </div><!-- /.heading-content-one -->
+
+                    </div><!-- /.col-md-5 -->
+                    <div class="col-md-6 block-title-area tb-cell mb-block">
+                        <div class="vehicle-filter-area">
+                            <ul class="nav nav-tabs hidden-xs" role="tablist">
+                                <li class="active">
+                                    <a href="#popular" aria-controls="popular" data-toggle="tab">
+                                        <i class="renticon renticon-taxi"></i>Taxi</a>
+                                </li>
+                                <li>
+                                    <a href="#newest" aria-controls="newest" data-toggle="tab">
+                                        <i class="renticon renticon-sedan-car"></i>Car</a>
+                                </li>
+                                <li>
+                                    <a href="#pickup-rent" aria-controls="pickup-rent" data-toggle="tab">
+                                        <i class="renticon renticon-pickup"></i>Pickup</a>
+                                </li>
+                                <li>
+                                    <a href="#ambulance" aria-controls="ambulance" data-toggle="tab"><i class="renticon renticon-ambulence"></i>Ambulance</a>
+                                </li>
+                                <li>
+                                    <a href="#boats" aria-controls="boats" data-toggle="tab"><i class="renticon renticon-speed-boat"></i>Boat</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.boat-filter -->
+                    </div><!-- /.col-md-5 -->
+
+                    <div class="col-md-2 block-navigation-area hidden-xs tb-cell">
+                        <div class="pull-right">
+                            <div class="view-all-item tab">
+                                <a href="#" class="view-all-btn yellow-button black-color">View all</a>
+                            </div><!-- /.view-all-item -->
+                        </div><!-- /.pull-right -->
+                    </div><!-- /.col-md-2 -->
+                </div><!-- /.row -->
+
+                <div class="row">
+                    <div class="service-content">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="popular">
+                                {{#each cars}}
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="vehicle-content nevy-bg theme-red style-two">
+                                        <div class="vehicle-top-meta">
+                                            <h2 class="vehicle-title">{{description}}</h2>
+                                            <div class="vehicle-meta">
+                                                <div class="meta-item">
+                                                    <div class="meta-rent">Rent:  <span>$200 /</span> Day,</div>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <div class="meta-rent">Rent:  <span>$12 /</span> Km</div>
+                                                </div>
+                                            </div><!-- /.meta-left -->
+                                        </div><!-- /.vehicle-top-meta -->
+                                        <div class="vehicle-thumbnail">
+                                            <a href="#">
+                                                <img src="/images/pickup/pickup01.png" alt="car-item" />
+                                            </a>
+                                        </div><!-- /.vehicle-thumbnail -->
+                                        <div class="vehicle-bottom-content">
+                                            <div class="vehicle-meta">
+                                                <div class="meta-item pull-left">
+                                                    <div class="meta-rent">
+                                                        <i class="fa fa-ambulance"></i> Door: 4
+                                                    </div>
+                                                    <div class="meta-rent">
+                                                        <i class="fa fa-medkit"></i> Bags: 2
+                                                    </div>
+                                                </div>
+                                                <div class="meta-item pull-right">
+                                                    <div class="meta-rent">
+                                                        <i class="fa fa-wheelchair"></i> Seats: 4
+                                                    </div>
+                                                    <div class="meta-rent">
+                                                        <i class="fa fa-plus-square"></i> A/c: Yes
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.meta-left -->
+                                        </div><!-- /.vehicle-bottom-content -->
+                                    </div><!-- /.vehicle-content -->
+                                </div><!-- /.col-md-3 -->
+                                {{/each}}
+
+                                
+                            </div> <!-- /.home -->
+
+                            <div role="tabpanel" class="tab-pane" id="newest">
+                                
+
+                                <div class="clearfix"></div>
+
+                               
+                            </div><!-- /.Tab panes -->
+
+                            <div role="tabpanel" class="tab-pane" id="pickup-rent">
+                            
+                            </div><!-- /.Tab panes -->
+
+                            <div role="tabpanel" class="tab-pane" id="ambulance">
+                               
+
+                                <div class="clearfix"></div>
+
+                            </div><!-- /.Tab panes -->
+
+
+                            <div role="tabpanel" class="tab-pane" id="boats">
+
+
+                                <div class="clearfix"></div>
+
+                             
+                            </div><!-- /.tab panes -->
+                        </div><!-- /.tab-content -->
+                        <!-- block-navigation-area -->
+                        <div class="block-navigation-area visible-xs-block visible-sm-block col-md-12">
+                            <div class="view-all-item clearfix">
+                                <a href="#" class="view-all-btn">View all</a>
+                            </div><!-- /.view-all-item -->
+                        </div><!-- /.block-navigation-area -->
+                    </div><!-- /.service-content -->
+                </div><!-- /.row -->
+            </div><!-- /.container-lg-screen -->
+        </div><!-- /.row -->
+    </div><!-- /.container  -->
+</div><!-- /.Regular-Vehicle Block -->
