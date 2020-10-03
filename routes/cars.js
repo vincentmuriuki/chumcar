@@ -6,8 +6,12 @@ router.get('/', (req, res) =>
   Cars.findAll()
     .then((cars) => {
       res.render('cars', {
-        cars: cars,
+        cars: cars
       });
+      // cars.forEach(element => {
+      //   console.log(element)
+      // });
+      // console.log(cars)
     })
     .catch((e) => res.send(e))
 );

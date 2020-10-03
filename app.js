@@ -1,33 +1,30 @@
-import express from 'express';
-import handlebars from 'express-handlebars';
-import path from 'path';
-import dotenv from 'dotenv';
-import db from './config/database.js';
-import bodyParser from 'body-parser';
-import carRoutes from './routes/cars.js'
+import express from 'express'
 import { dirname } from 'path';
+import path from 'path';
+import carRoutes from './routes/cars.js';
+import exphbs from 'express-handlebars'
 
-dotenv.config();
-const app = express();
-const PORT = process.env.PORT;
+const app = express()
 
-//Body parser
-app.use(express.urlencoded({ extended: false }));
+app.engine('hbs', exphbs({
+  defaultLayout: 'main',
+  extname: '.hbs'
+}))
 
-db.authenticate()
-  .then(() => console.log('Database connected..'))
-  .catch((err) => console.error(`Error, ${err}`));
+app.set('view engine', 'hbs')
 
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
-app.set('view engine', 'handlebars')
-
-// Static folder
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
-app.use('/cars', carRoutes)
+app.use('/cars', carRoutes);
 
-app.listen(PORT, console.log(`Server listening on ${PORT}`));
+const PORT = process.env.PORT || 5000
+app.listen(
+  PORT,
+  console.log(`Server listening on ${PORT}`)
+);

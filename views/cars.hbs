@@ -51,10 +51,10 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="popular">
                                 {{#each cars}}
-                                <div class="col-md-3 col-sm-6">
+                                {{!-- <div class="col-md-3 col-sm-6">{{this.name}}
                                     <div class="vehicle-content nevy-bg theme-red style-two">
                                         <div class="vehicle-top-meta">
-                                            <h2 class="vehicle-title">{{description}}</h2>
+                                            <h2 class="vehicle-title">{{this.name}}</h2>
                                             <div class="vehicle-meta">
                                                 <div class="meta-item">
                                                     <div class="meta-rent">Rent:  <span>$200 /</span> Day,</div>
@@ -81,7 +81,7 @@
                                                 </div>
                                                 <div class="meta-item pull-right">
                                                     <div class="meta-rent">
-                                                        <i class="fa fa-wheelchair"></i> Seats: 4
+                                                        <i class="fa fa-wheelchair"></i> Seats: {{this.seats}}
                                                     </div>
                                                     <div class="meta-rent">
                                                         <i class="fa fa-plus-square"></i> A/c: Yes
@@ -90,7 +90,9 @@
                                             </div><!-- /.meta-left -->
                                         </div><!-- /.vehicle-bottom-content -->
                                     </div><!-- /.vehicle-content -->
-                                </div><!-- /.col-md-3 -->
+                                </div><!-- /.col-md-3 --> --}}
+                                    <div>{{this.name}}</div>
+                                    <div>{{this.description}}</div>
                                 {{/each}}
 
                                 
