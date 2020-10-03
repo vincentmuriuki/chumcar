@@ -13,6 +13,12 @@ const Cars = db.define('cars', {
   },
   seats: {
       type: Sequelize.STRING
+  },
+  price: {
+    type: Sequelize.STRING
+  },
+  status: {
+    type: Sequelize.STRING
   }
 });
 

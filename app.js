@@ -3,8 +3,12 @@ import { dirname } from 'path';
 import path from 'path';
 import carRoutes from './routes/cars.js';
 import exphbs from 'express-handlebars'
+import bodyParser from 'body-parser'
 
 const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.engine('hbs', exphbs({
   defaultLayout: 'main',
