@@ -19,6 +19,9 @@ const Cars = db.define('cars', {
   },
   status: {
     type: Sequelize.STRING
+  },
+  userId: {
+    type: Sequelize.INTEGER
   }
 });
 

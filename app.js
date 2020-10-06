@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 app.use('/cars', carRoutes);
+// app.use('/user', )
 
 const PORT = process.env.PORT || 5000
 app.listen(

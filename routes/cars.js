@@ -2,11 +2,15 @@ import express from 'express';
 import Cars from '../models/Cars.js';
 const router = express.Router();
 import Responses from '../utils/response.js';
-import carsController from '../controllers/carControllers.js';
+import carsController from '../controllers/car.controller.js';
+import userController from '../controllers/user.controller.js'
 
-router.get('/', (re, res) => carsController.getCars(res));
-
+router.get('/', (req, res) => carsController.getCars(res));
+router.get('/approve/:id', (req, res) => carsController.approveCar(req, res))
 router.post('/add', (req, res) => carsController.saveCar(req, res));
+
+// User controllers
+router.post('/new/user')
 
 router.get('/:id', (req, res) => {
   Cars.findOne({

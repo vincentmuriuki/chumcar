@@ -16,7 +16,23 @@ class CarsController {
 
   async getCars(res) {
     const cars = await Cars.findAll();
-    return cars;
+    // return cars;
+    res.send(cars);
+  }
+
+  async approveCar(req, res) {
+    Cars.findOne({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((car) => {
+        car.update({
+          status: 'approved',
+        });
+        res.send(car)
+      })
+      .catch((err) => res.send(err));
   }
 }
 
