@@ -22,7 +22,7 @@ const Cars = db.define('cars', {
   },
   userId: {
     type: Sequelize.INTEGER
-  }
+  },
 });
 
 Cars.sync().then(() => {

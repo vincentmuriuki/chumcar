@@ -43,6 +43,9 @@ const Users = db.define(
       allowNull: true,
       type: Sequelize.STRING,
     },
+    password: {
+      type: Sequelize.STRING
+    }
   },
   {}
 );

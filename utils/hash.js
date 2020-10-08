@@ -5,7 +5,7 @@ dotenv.config();
 
 class Hash {
   generateSync(plainPassword) {
-    return bcrypt.hashSync(plainPassword, process.env.HASH_SALT_ROUNDS);
+    return bcrypt.hashSync(plainPassword, 8);
   }
 
   compareSync(plainPassword, hash) {
