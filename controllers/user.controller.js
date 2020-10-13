@@ -26,7 +26,7 @@ class UserController {
 
   async findUser(req, res) {
       const user = await userService.findUserByEmail(req.body.email)
-      if (!user) return Responses.handleError(404, 'invalid credentials', res)
+      if (!user) return Responses.handleError(404, 'user does not exist', res)
       if (!hash.compareSync(req.body.password, user.password)) {
           return Responses.handleError(400, 'invalid credentials', res)
       }
@@ -38,6 +38,10 @@ class UserController {
           token,
       }
       return Responses.handleSuccess(200, 'success', res, data)
+  }
+
+  async verifyAccount(req, res) {
+    const user = Users.findOne({ where: { id: }})
   }
 }
 
