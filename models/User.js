@@ -58,4 +58,8 @@ Users.associate = (models) => {
     };
 };
 
+Users.sync().then(() => {
+  console.log('Table created');
+});
+
 export default Users;

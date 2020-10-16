@@ -10,8 +10,8 @@ class CarsController {
       seats: req.body.seats,
       price: req.body.price,
     };
-    await Cars.create({ carData });
-    return Responses.handleSuccess(201, 'created', res, carData);
+    const car = await Cars.create(carData);
+    return Responses.handleSuccess(201, 'created', res, car);
   }
 
   async getCars(res) {
@@ -30,7 +30,7 @@ class CarsController {
         car.update({
           status: 'approved',
         });
-        res.send(car)
+        res.send(car);
       })
       .catch((err) => res.send(err));
   }
